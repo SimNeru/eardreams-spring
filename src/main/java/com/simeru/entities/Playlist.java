@@ -7,14 +7,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "playlist")
+@Table (name = "playlist")
 public class Playlist {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	private int id_utente;
 	private int numero_canzoni;
-	private String nome;
+	private String nome_playlist;
 	
 	public int getId() {
 		return id;
@@ -23,16 +24,22 @@ public class Playlist {
 		this.id = id;
 	}
 	public String getNome() {
-		return nome;
+		return nome_playlist;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setNome(String nome_playlist) {
+		this.nome_playlist = nome_playlist;
 	}
 	public int getNumero_canzoni() {
 		return numero_canzoni;
 	}
 	public void setNumero_canzoni(int numero_canzoni) {
 		this.numero_canzoni = numero_canzoni;
+	}
+	public int getId_utente() {
+		return id_utente;
+	}
+	public void setId_utente(int id_utente) {
+		this.id_utente = id_utente;
 	}
 	
 }

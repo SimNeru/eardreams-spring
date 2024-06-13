@@ -2,8 +2,11 @@ package com.simeru.services;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+
 import com.simeru.entities.Brano;
 
+@Service
 public interface IBranoService {
 
 	List<Brano> getBrano();
