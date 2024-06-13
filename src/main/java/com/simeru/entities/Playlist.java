@@ -1,9 +1,15 @@
 package com.simeru.entities;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,9 +19,13 @@ public class Playlist {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+//	@JoinColumn(name = "id_utente", referencedColumnName = "utenti(id)")
 	private int id_utente;
 	private int numero_canzoni;
 	private String nome_playlist;
+	
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "playlist")
+    private List<Utente> utente;
 	
 	public int getId() {
 		return id;

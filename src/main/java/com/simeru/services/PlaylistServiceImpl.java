@@ -2,17 +2,16 @@ package com.simeru.services;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.simeru.entities.Playlist;
 import com.simeru.repositories.IPlaylistDAO;
-import com.simeru.services.IPlaylistService;
 
 @Service
 public class PlaylistServiceImpl implements IPlaylistService {
 
-	@Autowired
+//	@Autowired
 	IPlaylistDAO dao;
 	
 	@Override

@@ -19,10 +19,10 @@ import com.simeru.services.IUtenteService;
 @RequestMapping("api")
 public class ControllerREST {
 
-	@Autowired
-	private IBranoService serviceBrano;
-	@Autowired
-	private IPlaylistService servicePlaylist;
+//	@Autowired
+//	private IBranoService serviceBrano;
+//	@Autowired
+//	private IPlaylistService servicePlaylist;
 	@Autowired
 	private IUtenteService serviceUtente;
 	
