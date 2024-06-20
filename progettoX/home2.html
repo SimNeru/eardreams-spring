@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylehome.css">
+    <link rel="stylesheet" href="util.css">
+    <link rel="stylesheet" href="estilo.css">
+
+
+</head>
+
+<body>
+    <div class="container flex bg-black">
+   <div class="left  ">
+    <div class="home bg-grey rounded m-1 p-1">
+        <span class="icon">  
+            <ion-icon name="logo-octocat"></ion-icon>
+        </span>
+        <div class="logo"></div>
+        <ul>
+            <span class="icon">  
+            <ion-icon name="home-outline"></ion-icon>
+            </span>
+            <a href="home.html">
+            <label>Home</label></a>
+
+            <li><span class="icon"></li> 
+             <ion-icon name="search-outline"></ion-icon>
+            </span>
+            <label>Ricerca</label>
+        </ul>
+    </div>
+    <div class="list bg-grey rounded m-1 p-1s">
+        <span class="icon">  
+            <ion-icon name="musical-note-outline"></ion-icon>
+            </span>   
+    <button style="background-color:rgb(214, 121, 210)"; type="submit">CREA LA TUA PLAY LIST</button>
+    
+
+
+
+
+    <div class="container">
+
+        <h1></h1>
+
+        <section class="sez-form">
+
+
+            <div class="form-canzone">
+                <h2></h2>
+                <input type="text" id="elNomeUtente" placeholder="Inserisci nome">
+                <input type="text" id="elTitolo" placeholder="Titolo canzone">
+                <input type="text" id="elArtista" placeholder="Artista canzone">
+               
+
+                <button id="btnCarica">Carica</button>
+
+                <div id="feedback"></div>
+            </div>
+
+        </section>
+
+        <hr>
+
+        <section>
+
+            <button id="btnStampaPlaylist">Stampa playlist</button>
+
+            <h2 id="nomePlaylist"></h2>
+
+            <ul id="elPlaylist"></ul>
+
+        </section>
+
+    </div>
+
+    </div>
+
+
+
+
+
+    </div>
+   <div class="right border m-1 p-1">
+         Bentornato
+   <div class="header">
+    <div class="nav">
+</div>
+<div class="buttons">
+    <a href="formRegistrazione.html">
+<button style="background-color:rgb(219, 226, 125)";type="submit">Signup</button></a>
+<a href="login.html">
+<button style="background-color:rgb(217, 228, 112)";type="submit">Login</button></a>
+</div>
+</div>
+<div class="playlists">
+<h1>Nicky Nicole</h1>
+
+<div class="card">
+<div class="imgbox">
+<div class="suono">
+<img src="ojosverdes.jpg" alt="AW">
+<h2>Ojos Verdes</h2>
+<audio src="Nicky.mp3" type="audio-mp3" controls></audio>
+
+
+<div class="card"></div>
+<img src="young.jpg" alt="AW">
+<h2>8AM</h2>    
+<audio src="young.mp3" type="audio/mp3" controls></audio>
+        
+ </div>
+</div>
+</div>
+</div>
+ </div>
+ <script src="PlayList.js"></script>
+
+ <script  type="module"  src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

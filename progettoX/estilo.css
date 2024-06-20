@@ -1,0 +1,52 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+
+}
+.suono{
+    position:absolute;
+    width:350px;
+    background:#00070a;
+    border-radius:20px;
+    box-shadow: 0 60px 100px rgba(0,0,0,0.5);
+
+}
+.suono .imgbox{
+    position: relative;
+    width: 100%;
+    height: 750px;
+}
+.suono .imgbox img{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-top-left-radius:20px;
+  border-top-right-radius:20px;
+}
+.suono audio{
+width:100%;
+outline:none;
+}
+.audio-mp3{
+  background-color:#28b018;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
