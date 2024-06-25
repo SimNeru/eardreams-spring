@@ -1,9 +1,15 @@
-package com.simeru.entities;
+package com.eardreams.project.entities;
 
+import java.util.Set;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -12,26 +18,28 @@ public class Playlist {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
-//	@JoinColumn(name = "id_utente", referencedColumnName = "utenti(id)")
-//	private int id_utente;
+	private int playlist_id;
 	private int numero_canzoni;
-	private String nome_playlist;
+	private String nome;
+	
+	@ManyToMany(mappedBy = "braniPlaylist")
+	private Set<Brano> playlistBrani;
 
-//	@OneToMany(fetch = FetchType.LAZY, mappedBy = "playlist")
-//    private List<Utente> utente;
-
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="utente_id")
+	private Utente utente;
+	
 	public int getId() {
-		return id;
+		return playlist_id;
 	}
 	public void setId(int id) {
-		this.id = id;
+		this.playlist_id = id;
 	}
 	public String getNome() {
-		return nome_playlist;
+		return nome;
 	}
-	public void setNome(String nome_playlist) {
-		this.nome_playlist = nome_playlist;
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 	public int getNumero_canzoni() {
 		return numero_canzoni;
@@ -39,11 +47,16 @@ public class Playlist {
 	public void setNumero_canzoni(int numero_canzoni) {
 		this.numero_canzoni = numero_canzoni;
 	}
-//	public int getId_utente() {
-//		return id_utente;
-//	}
-//	public void setId_utente(int id_utente) {
-//		this.id_utente = id_utente;
-//	}
-
+	public Set<Brano> getPlaylistBrani() {
+		return playlistBrani;
+	}
+	public Utente getUtente() {
+		return utente;
+	}
+	public void setUtente(Utente utente) {
+		this.utente = utente;
+	}
+	public void setPlaylistBrani(Set<Brano> playlistBrani) {
+		this.playlistBrani = playlistBrani;
+	}
 }
